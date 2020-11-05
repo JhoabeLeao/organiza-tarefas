@@ -1,22 +1,10 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 
-
 function App() {
 
   const [tarefas, setarTarefas] = useState([
-    /*
-    {
-      id: 0,
-      tarefa:'Minha tarefa do dia',
-      finalizada: false
-    },
-    {
-      id: 0,
-      tarefa:'Minha tarefa do dia',
-      finalizada: true
-    },*/
-
+    
   ]);
   const [modal,setModal] = useState(false);
 
@@ -78,7 +66,7 @@ function App() {
           tarefas.map((val)=>{
             if(!val.finalizada){
               return(
-              <p onClick={()=>marcarConcluida(val.id)}>{val.tarefa}</p>
+               <p onClick={()=>marcarConcluida(val.id)}>{val.tarefa}</p>
               );
             }else{
               return(
