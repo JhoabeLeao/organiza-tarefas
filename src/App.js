@@ -55,13 +55,16 @@ function App() {
               <input id="content-tarefa" type="text" />
               <button onClick={() => salvarTarefa()}>Salvar!</button>            
             </div>
+            
         </div>
         :
         <div></div>
       }
       <div onClick={()=>abrirModal()} className="addTarefa">+</div>
       <div className="boxTarefas">
+
         <h2>Minhas Tarefas do Dia!</h2>
+        
         {
           tarefas.map((val)=>{
             if(!val.finalizada){
@@ -75,6 +78,8 @@ function App() {
             }
           })
         }
+
+        
 
       </div>
     </div>
