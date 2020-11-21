@@ -44,6 +44,21 @@ body{
   line-height: 50px;
 }
 
+.nightMode{
+  position: relative;
+  right:10px;
+  bottom:10px;
+  background-color: rgb(41, 41, 41);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+}
+
 .modal{
   position: fixed;
   left: 0;

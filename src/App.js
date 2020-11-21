@@ -61,6 +61,7 @@ function App() {
         <div></div>
       }
       <div onClick={()=>abrirModal()} className="addTarefa">+</div>
+      <div onClick={()=>abrirModal()} className="addTarefa">teste</div>
       <div className="boxTarefas">
 
         <h2>Minhas Tarefas do Dia!</h2>
