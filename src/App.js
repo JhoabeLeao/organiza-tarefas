@@ -1,7 +1,57 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 
+import React, { Fragment } from 'react';
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./theme";
+import GlobalTheme from "./globals";
+import styled from "styled-components";
+
 function App() {
+ 
+    return (
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <Fragment>
+          <GlobalTheme />
+          <Container>
+            <Title>
+              Title em {theme === "light" ? "light theme" : "dark theme"}!
+            </Title>
+            <ButtonChange onClick={toggleTheme}>Mudar tema</ButtonChange>
+          </Container>
+        </Fragment>
+      </ThemeProvider>
+    );
+  
+  
+  const Container = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `;
+  
+  const Title = styled.h1`
+    font-size: 30px;
+    margin-left: 15px;
+  `;
+  
+  const ButtonChange = styled.button`
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+  `;
+
+}
+
+const [ theme, setTheme ] = useState('light');
+
+
+  const App = () => {
+    return (
+    <div />
+   )
+  }
 
   const [tarefas, setarTarefas] = useState([
     
@@ -61,7 +111,9 @@ function App() {
         <div></div>
       }
       <div onClick={()=>abrirModal()} className="addTarefa">+</div>
-      <div onClick={()=>abrirModal()} className="addTarefa">teste</div>
+      
+      <input id="night-mode" class="lamp" type="checkbox" aria-label="night-mode" />
+
       <div className="boxTarefas">
 
         <h2>Minhas Tarefas do Dia!</h2>
@@ -84,7 +136,6 @@ function App() {
 
       </div>
     </div>
-  );
+  );}
       
-} 
 export default App;
